@@ -74,6 +74,7 @@ else:
 
 # Find the smallest integer N such that 1 + 2 + ... + N >= 100
 
+""" SLIGHTLY OFF VERSION:
 sum = 0
 current_num = 1
 while sum < 100:
@@ -81,6 +82,17 @@ while sum < 100:
     print(f"Adding {current_num}")
     print(f"Total is now {sum}")
     current_num += 1
+"""
+
+# CORRECTED VERSION:
+sum = 0
+current_num = 0 # Notice the change to 0
+while sum < 100:
+    current_num += 1 # Order matters!  This way we start with 1, then go to 2, 3, ...
+    sum = sum + current_num
+    print(f"Adding {current_num}")
+    print(f"Total is now {sum}")
+print(current_num)
 
 some_list = [8, 3, 4]
 for k in range(len(some_list)): # k is the index: 0, 1, 2, ...
@@ -89,6 +101,7 @@ for k in range(len(some_list)): # k is the index: 0, 1, 2, ...
 for val in some_list: # val is the actual value itself
     print(val) # Notice there’s no index here - the value itself is being used
 
+# Making a function that returns the value N such that 1 + 2 + ... + N <= target sum
 def find_N(target_sum):
     sum = 0
     current_num = 0
