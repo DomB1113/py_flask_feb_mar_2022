@@ -1,3 +1,5 @@
+# Link on background color demo: https://techstacker.com/how-to-loop-background-color-animation-css/
+
 class User:
     def __init__(self, data):
         self.id = data["id"]
