@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Numbers Board!</title>
+</head>
+<body>
+    <h1>Welcome, {{ session["name"] }}!</h1>
+    <a href="/exit">Exit</a>
+    <form action="/add_number" method="POST">
+        <div>
+            <label>Enter a number:</label>
+            <input type="number" name="number">
+        </div>
+        <input type="submit" value="Enter">
+    </form>
+    {% for number in session['numbers'] %}
+        <p>{{ number }} was entered.</p>
+    {% endfor %}
+    <p>Sum so far: {{ session['sum'] }}</p>
+    <a href="/reset">Reset</a>
+</body>
+</html>
