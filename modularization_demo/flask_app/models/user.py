@@ -1,5 +1,6 @@
 from flask_app import app
-from flask_app.config.mysqlconnection import MySQLConnection # Allow us to connect to MySQL
+# Allow us to connect to MySQL - import connectToMySQL, NOT MySQLConnection as yours truly erroneously did
+from flask_app.config.mysqlconnection import connectToMySQL
 # Might need to import other models here
 from flask_app.models import game # Import the game file -> then you can do game.Game() to create a Game
 class User:

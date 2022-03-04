@@ -1,5 +1,6 @@
 from flask_app import app
-from flask_app.config.mysqlconnection import connectToMySQL # Allow us to connect to MySQL
+# Allow us to connect to MySQL - import connectToMySQL, NOT MySQLConnection as yours truly erroneously did
+from flask_app.config.mysqlconnection import connectToMySQL
 # Might need to import other models here
 from flask_app.models import user # Import the user file -> then you can do user.User() to create a User
 
